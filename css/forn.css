@@ -174,6 +174,9 @@ input, textarea {
   margin-right: 16px;
   background: url(../img/icons/arrow-left.svg) center/auto no-repeat;
 }
+.form__go-back:hover {
+  text-decoration: underline;
+}
 
 .form {
   background: #FFFFFF;
@@ -246,6 +249,7 @@ input, textarea {
   color: #3A4374;
   background: #F7F8FD;
   border-radius: 5px;
+  box-sizing: border-box;
   width: 100%;
   padding: 13px 24px;
   margin-bottom: 24px;
@@ -340,6 +344,10 @@ input, textarea {
 
 .form__sort:hover .form__drop-down-hover::after {
   transform: rotate(0deg);
+}
+
+.form__sort:hover .form__drop-down-hover {
+  border: 1px solid #4661E6;
 }
 
 .form__drop-down {

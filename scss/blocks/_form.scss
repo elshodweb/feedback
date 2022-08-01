@@ -21,6 +21,9 @@
       margin-right: 16px;
       background: url(../img/icons/arrow-left.svg) center / auto no-repeat;
    }
+   &:hover{
+      text-decoration: underline;
+   }
 }
 
 .form {
@@ -90,6 +93,7 @@
    color: $blue_black;
    background: #F7F8FD;
    border-radius: 5px;
+   box-sizing: border-box;
    width: 100%;
    padding: 13px 24px;
    margin-bottom: 24px;
@@ -169,6 +173,10 @@
    transform: rotate(0deg);
 }
 
+.form__sort:hover .form__drop-down-hover {
+   
+   border: 1px solid $blue;
+}
 .form__drop-down {
    cursor: pointer;
    position: absolute;
