@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="css/forn.css">
+   <title>Feedback</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="container">
+         <div class="container--form">
+            <a href="index.html" class="form__go-back">Go Back</a>
+            <form action="#" class="form">
+               <h1 class="form__title">Create New Feedback</h1>
+               <h3 class="form__name">Feedback Title</h3>
+               <p class="form__info">Add a short, descriptive headline</p>
+               <input minlength="4" type="text" class="form__input form-element">
+               <h3 class="form__name">Category</h3>
+               <p class="form__info">Choose a category for your feedback</p>
+               <div class="form__sort ">
+                  <div class="form__drop-down-hover form-element">Feature</div>
+                  <div class="form__drop-down">
+                     <ul class="form__select">
+                        <li class="form__option">Feature</li>
+                        <li class="form__option">UI</li>
+                        <li class="form__option">UX</li>
+                        <li class="form__option">Enhancement</li>
+                        <li class="form__option">Bug</li>
+                     </ul>
+                  </div>
+               </div>
+               <h3 class="form__name">Feedback Detail</h3>
+               <p class="form__info">Include any specific comments on what should be improved, added, etc.</p>
+               <textarea minlength="15" class="form__textarea form-element" name="feedbak"></textarea>
+               <div class="form__buttons">
+                  <a href="index.html" class="form__buton-cance">Cancel</a>
+                  <button type="submit" class="form__buton-add">Add Feedback</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

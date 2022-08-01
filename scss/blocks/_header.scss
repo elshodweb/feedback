@@ -1,0 +1,205 @@
+.content {
+   max-width: 825px;
+   flex-grow: 1;
+}
+
+.header {
+   background: $blue_black;
+   border-radius: 10px;
+   margin-bottom: 24px;
+}
+
+.header__row {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 12px 14px;
+}
+
+.header__left {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.header__logo {
+   margin-right: 16px;
+}
+
+.header__sug {
+   margin-right: 38px;
+   font-weight: 700;
+   font-size: 18px;
+   line-height: 26px;
+   /* identical to box height */
+   letter-spacing: -0.25px;
+   color: $white;
+}
+
+.header__sort {
+   color: $white;
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 20px;
+   position: relative;
+   cursor: pointer;
+}
+
+.header__drop-down-hover {
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 20px;
+   padding: 5px 0;
+   color: $dark_white;
+   opacity: 0.6;
+   display: flex;
+   align-items: center;
+   transition: all .15s ease-in-out;
+
+   &::after {
+      content: '';
+      margin-left: 8px;
+      height: 5px;
+      width: 10px;
+      display: inline-block;
+      cursor: pointer;
+      background: url(../img/icons/arrow-white.svg) center / 100% no-repeat;
+      transform: rotate(180deg);
+      transition: all .3s ease-in-out;
+   }
+
+   span {
+      font-weight: 400;
+      margin-right: 3px;
+   }
+}
+
+.header__drop-down-hover:hover+.header__drop-down,
+.header__drop-down:hover {
+   transform: translate(0%, 0%) scale(1);
+   opacity: 1;
+   visibility: visible;
+}
+
+.header__sort:hover .header__drop-down-hover::after {
+   transform: rotate(0deg);
+
+}
+
+.header__drop-down {
+   cursor: pointer;
+   position: absolute;
+   transition: all .3s;
+   left: 0;
+   top: 100%;
+   padding-top: 30px;
+   transform: translate(-30%, -50%) scale(0);
+   z-index: 1;
+   opacity: 0;
+   visibility: hidden;
+}
+
+.header__select {
+   width: 255px;
+   background: $white;
+   box-shadow: 0px 10px 40px -7px rgba(55, 63, 104, 0.350492);
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+.header__option {
+   background: $white;
+   display: block;
+   padding: 12px 24px;
+   color: $grey;
+   cursor: pointer;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+   &:first-child:after {
+      content: '';
+      margin-left: 8px;
+      height: 8px;
+      width: 12px;
+      display: inline-block;
+      cursor: pointer;
+      background: url(../img/icons/galochka.svg) center / 100% no-repeat;
+   }
+
+   &+& {
+      border-top: 1px solid rgba(58, 67, 115, .15);
+   }
+
+   &:hover {
+      color: $violet;
+   }
+
+   &:active {
+      background: $thin_white;
+   }
+}
+
+.header__btn {
+   background: $violet;
+}
+
+@media only screen and (max-width:970px) {
+   .content {
+      max-width: 700px;
+   }
+}
+
+@media only screen and (max-width:700px) {
+   .header {
+      position: fixed;
+      left: 0;
+      top: 87px;
+      width: 100%;
+      border-radius: 0;
+      z-index: 1;
+   }
+
+   .header__row {
+      padding: 8px 14px;
+   }
+}
+
+@media only screen and (max-width:600px) {
+   .header {
+      top: 79px;
+   }
+
+   .header__logo {
+      display: none;
+   }
+
+   .header__sug {
+      display: none;
+   }
+
+   .header__row {
+      padding: 8px 24px;
+   }
+}
+
+@media only screen and (max-width:430px) {
+   .header {
+      top: 71px;
+   }
+
+   .header__drop-down-hover {
+      font-size: 13px;
+      line-height: 18px;
+   }
+}
+
+@media only screen and (max-width:367px) {
+   .header__row {
+      padding: 8px 12px;
+   }
+
+   .header__drop-down-hover span {
+      display: none;
+   }
+}

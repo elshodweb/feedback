@@ -1,0 +1,10 @@
+.btn {
+   @include btn($violet);
+}
+
+@media only screen and (max-width:430px) {
+   .btn {
+      font-size: 13px;
+      line-height: 19px;
+   }
+}
